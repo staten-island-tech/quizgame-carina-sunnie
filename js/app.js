@@ -9,32 +9,28 @@
 // CorrectAnswer:”hola”
 //  Ex (object)
 // {answeChoice “caio”, correct: false} caio and false is a property. If it’s a buzzfeed style quiz with different values then you’d also have value:integer
-const theQuestions === [
-    { 
-    question: "blah blah blah ?",
-    answers: {
-        {answerChoice "first", correct: false},
-        {answerChoice "second", correct: false},
-        {answerChoice "third", correct: true},
-    }
-    }
-    { 
-        question: "blah blah blah ?",
-        answers: {
-            {answerChoice "first", correct: false},
-            {answerChoice "second", correct: false},
-            {answerChoice "third", correct: true},
-        }
-    }
-    { 
-    question: "blah blah blah ?",
-    answers: {
-        {answerChoice "first", correct: false},
-        {answerChoice "second", correct: false},
-        {answerChoice "third", correct: true},
-    }
-    }  //etc. or have choices then have correctAnswer at the end. put values inthere maybe
+
+const QuestionOne = "blah blah blah ?";
+
+const AnsChoiceOne = [
+  { a: "first", correct: false },
+  { b: "second", correct: false },
+  { c: "third", correct: true },
 ];
+
+console.log(QuestionOne);
+console.log(AnsChoiceOne);
+
+const QuestionTwo = "blah blah blahh?";
+const AnsChoiceTwo = [
+  { a: "first", correct: false, value: 0 },
+  { b: "second", correct: false, value: 0 },
+  { c: "third", correct: true, value: 10 },
+];
+
+console.log(QuestionTwo);
+console.log(AnsChoiceTwo);
+//etc. or have choices then have correctAnswer at the end. put values inthere maybe
 
 // //
 // //Event to Start game ? Click start button or on page load (listening to an event)
