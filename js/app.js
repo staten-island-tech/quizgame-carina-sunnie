@@ -13,9 +13,9 @@
 const QuestionOne = "blah blah blah ?";
 
 const AnsChoiceOne = [
-  { a: "first", correct: false },
-  { b: "second", correct: false },
-  { c: "third", correct: true },
+  { a: "first", correct: false, value: 0 },
+  { b: "second", correct: false, value: 0 },
+  { c: "third", correct: true, value: 10 },
 ];
 
 console.log(QuestionOne);
@@ -30,6 +30,7 @@ const AnsChoiceTwo = [
 
 console.log(QuestionTwo);
 console.log(AnsChoiceTwo);
+
 //etc. or have choices then have correctAnswer at the end. put values inthere maybe
 
 // //
