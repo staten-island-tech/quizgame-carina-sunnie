@@ -50,6 +50,18 @@ console.log(AnsChoiceFour);
 let quizContainer = document.getElementbyId("quiz");
 let resultsContainer= document.getElementbyId("results");
 let submitButton= document.getElementbyId("submit");
+//here put shtuff to start the quiz and the function shamarbledarngledingdong
+function showQuestions (allQuestions, quizContainer){
+  //thanks google my good frienderino/butigetit
+  //then output display questions herrree and like,,, according to whalen,,, 
+  // Display question one.
+// Listen for user input event.
+// Check if correct.
+// If correct display correct modal (popup) or check, update score
+// Else display false modal or x, Update score.
+// (Checking index of q) if question number is less than questions.length display next question
+// else show user score display score modal/ end modal or something LATER OK*****
+}
 
 //etc. or have choices then have correctAnswer at the end. put values inthere maybe
 
