@@ -9,7 +9,7 @@
 // CorrectAnswer:”hola”
 //  Ex (object)
 // {answeChoice “caio”, correct: false} caio and false is a property. If it’s a buzzfeed style quiz with different values then you’d also have value:integer
-
+let allQuestions = [
 const QuestionOne = "blah blah blah ?";
 
 const AnsChoiceOne = [
@@ -27,9 +27,29 @@ const AnsChoiceTwo = [
   { b: "second", correct: false, value: 0 },
   { c: "third", correct: true, value: 10 },
 ];
-
 console.log(QuestionTwo);
 console.log(AnsChoiceTwo);
+
+const QuestionThree = "blah blah blahh?";
+const AnsChoiceThree = [
+  { a: "first", correct: false, value: 0 },
+  { b: "second", correct: false, value: 0 },
+  { c: "third", correct: true, value: 10 },
+];
+console.log(QuestionThree);
+console.log(AnsChoiceThree);
+const QuestionFour = "blah blah blahh?";
+const AnsChoiceFour = [
+  { a: "first", correct: false, value: 0 },
+  { b: "second", correct: false, value: 0 },
+  { c: "third", correct: true, value: 10 },
+];
+console.log(QuestionFour);
+console.log(AnsChoiceFour);
+];
+let quizContainer = document.getElementbyId("quiz");
+let resultsContainer= document.getElementbyId("results");
+let submitButton= document.getElementbyId("submit");
 
 //etc. or have choices then have correctAnswer at the end. put values inthere maybe
 
