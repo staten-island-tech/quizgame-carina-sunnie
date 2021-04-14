@@ -1,4 +1,14 @@
+import { questions } from "./questions";
+
+//id from html to java
+const ansA = document.getElementById("a");
+const ansB = document.getElementById("b");
+const ansC = document.getElementById("c");
+const question = document.getElementById("question");
+const NextButton = document.getElementById("next-btn");
 // Let score
+
+let score = 0;
 
 // //array
 // Question: string
@@ -9,27 +19,6 @@
 // CorrectAnswer:”hola”
 //  Ex (object)
 // {answeChoice “caio”, correct: false} caio and false is a property. If it’s a buzzfeed style quiz with different values then you’d also have value:integer
-
-const QuestionOne = "blah blah blah ?";
-
-const AnsChoiceOne = [
-  { a: "first", correct: false, value: 0 },
-  { b: "second", correct: false, value: 0 },
-  { c: "third", correct: true, value: 10 },
-];
-
-console.log(QuestionOne);
-console.log(AnsChoiceOne);
-
-const QuestionTwo = "blah blah blahh?";
-const AnsChoiceTwo = [
-  { a: "first", correct: false, value: 0 },
-  { b: "second", correct: false, value: 0 },
-  { c: "third", correct: true, value: 10 },
-];
-
-console.log(QuestionTwo);
-console.log(AnsChoiceTwo);
 
 //etc. or have choices then have correctAnswer at the end. put values inthere maybe
 
