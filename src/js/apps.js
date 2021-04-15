@@ -1,4 +1,14 @@
+import { questions } from "./questions";
+
+//id from html to java
+const ansA = document.getElementById("a");
+const ansB = document.getElementById("b");
+const ansC = document.getElementById("c");
+const question = document.getElementById("question");
+const NextButton = document.getElementById("next-btn");
 // Let score
+
+let score = 0;
 
 // //array
 // Question: string
