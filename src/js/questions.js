@@ -9,7 +9,7 @@ const questions = [
     ],
   },
   {
-    Question: "Which of these famous portraits' subjects have no eyebrows?",
+    Question: "Which one of these famous portraits' subjects have eyebrows?",
     Answers: [
       { a: "Portrait of Adele Bloch-Bauer I", correct: true },
       { b: "Mona Lsa", correct: false },
