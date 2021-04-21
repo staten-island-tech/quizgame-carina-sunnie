@@ -19,7 +19,7 @@ for(const i = 0; i < questions.length; i +++){
     "WRONG!!! womp womp... wooooomp"
   }
 } //ITS A BIG OL LOOP. BREAKS WHEN YOU THE NUMBER OF QUESTIONS ARE ANSWERED
-alert("YOUR SCORE IS: "_+ score + "/" + questions.length " . Not bad.")
+alert("YOUR SCORE IS: " + score + "/" + questions.length " . Not bad.");
 // //array
 // Question: string
 // Answers: possible-array of objects or strings
