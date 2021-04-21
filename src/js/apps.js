@@ -1,4 +1,4 @@
-import { questions } from "./questions";
+import { questions } from "./questions.js";
 
 //id from html to java
 const ansA = document.getElementById("a");
@@ -6,29 +6,22 @@ const ansB = document.getElementById("b");
 const ansC = document.getElementById("c");
 const question = document.getElementById("question");
 const NextButton = document.getElementById("next-btn");
-// Let score
 
+function setNextQuestion() {}
+
+// Let score
 let score = 0;
-for(const i = 0; i < questions.length; i +++){
+
+for (const i = 0; i < questions.length; i) {
   let response = window.question(questions[i].question); //i is like the question number . also wanted triple euqual signed cause i dont trust it but it didnt work :(
-  if (response === questions[i].annswer){
-    score ++;
+  if (response === questions[i].annswer) {
+    score++;
     alert("Correct!... how did you know that? kinda sussspicious ngl");
-  }
-  else {
-    "WRONG!!! womp womp... wooooomp"
+  } else {
+    ("WRONG!!! womp womp... wooooomp");
   }
 } //ITS A BIG OL LOOP. BREAKS WHEN YOU THE NUMBER OF QUESTIONS ARE ANSWERED
-alert("YOUR SCORE IS: " + score + "/" + questions.length " . Not bad.");
-// //array
-// Question: string
-// Answers: possible-array of objects or strings
-// Ex (string)
-// [“ciao”, “Nihao”, “Hola”]
-
-// CorrectAnswer:”hola”
-//  Ex (object)
-// {answeChoice “caio”, correct: false} caio and false is a property. If it’s a buzzfeed style quiz with different values then you’d also have value:integer
+alert("YOUR SCORE IS: " + score + "/" + questions.length + ". Not bad.");
 
 let quizContainer = document.getElementbyId("quiz");
 let resultsContainer = document.getElementbyId("results");
