@@ -2,7 +2,7 @@ import { questions } from "./questions.js";
 
 //id from html to java
 const question = document.getElementById("question");
-const NextButton = document.getElementById("next-btn");
+const NextButton = document.getElementById("next-button");
 const questionContainter = document.getElementById("q-container");
 const answerChoices = document.getElementById("answerchoices-box");
 
@@ -20,7 +20,7 @@ function showQuestions(question) {
   question.answers.forEach((answer) => {
     const button = document.createElement("button");
     button.innerText = answer.innerText;
-    button.classLIst.add("btn");
+    button.classLIst.add("button");
     if (answer.correct) {
       button.dataset.correct = answer.correct;
     } // add data attribute to btn element, only correct answer is accounted for (?)
