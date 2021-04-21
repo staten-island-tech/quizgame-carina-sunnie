@@ -23,7 +23,8 @@ function showQuestions(question) {
     button.classLIst.add("btn");
     if (answer.correct) {
       button.dataset.correct = answer.correct;
-    }
+    } // add data attribute to btn element, only correct answer is accounted for (?)
+    button.addEventListener("click", selectAnswer);
   });
   //thanks google my good frienderino/butigetit
   //then output display questions herrree and like,,, according to whalen,,,
