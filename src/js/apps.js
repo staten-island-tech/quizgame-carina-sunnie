@@ -8,6 +8,11 @@ const answerChoices = document.getElementById("answerchoices-box");
 
 let shuffledQuestions, currentQuestionsIndex;
 
+NextButton.addEventListener("click", () => {
+  currentQuestionsIndex++;
+  setNextQuestion();
+});
+
 //here put shtuff to start the quiz and the function shamarbledarngledingdong
 function startGame() {
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
@@ -25,6 +30,7 @@ function showQuestions(question) {
       button.dataset.correct = answer.correct;
     } // add data attribute to btn element, only correct answer is accounted for (?)
     button.addEventListener("click", selectAnswer);
+    answerChoices.appendChild(button);
   });
   //thanks google my good frienderino/butigetit
   //then output display questions herrree and like,,, according to whalen,,,
@@ -38,10 +44,46 @@ function showQuestions(question) {
 }
 
 function setNextQuestion() {
+  resetState();
   showQuestions(shuffledQuestions[currentQuestionsIndex]);
 }
 
-// Let score
+function resetState() {
+  NextButton.classList.add("hide");
+  while (answerChoices.firstChild) {
+    answerChoices.removeChild(answerChoices.firstChild);
+    //hides previous answers + sets new answers & questions instead
+  }
+}
+
+function selectAnswer(e) {
+  const selectedButton = e.target; //button that's clicked
+  const correct = selectedButton.dataset.correct; //check dataset for if selected button is correct
+  setStatusClass(document.body, correct); //takes whether or not the body is set to correct or wrong
+  Array.from(answerChoices.children).forEach((button) => {
+    setStatusClass(button, button.dataset.correct);
+  }); //loop thru buttons
+  if (shuffledQuestions.length > currentQuestionsIndex + 1) {
+    NextButton.classList.remove("hide");
+  } else {
+    //HOW TO SHOW THE SCORE???
+  }
+}
+
+function setStatusClass(element, correct) {
+  clearStatusClass(element);
+  if (correct) {
+    element.classList.add("correct");
+  } else {
+    element.classList.add("wrong");
+  }
+} //sets status based on if the answer was the correct answer
+
+function clearStatusClass(element) {
+  element.classList.remove("wrong");
+  element.classList.remove("correct");
+} //clear the status class by removing them
+
 let score = 0;
 
 for (const i = 0; i < questions.length; i) {
