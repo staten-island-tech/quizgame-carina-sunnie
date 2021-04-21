@@ -1,5 +1,23 @@
+$neutral: #4a148c;
+$wrong: #ff1744;
+$correct: #2962ff;
+$white: rgba(243, 243, 245, 255);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
 body {
-  background-color: rgba(243, 243, 245, 255);
+  // background-color: rgba(243, 243, 245, 255);
+  background-color: $neutral;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
 }
 .QuestionOne,
 .QuestionTwo,
@@ -9,16 +27,55 @@ body {
 .ansChoiceOne {
   //same here;;;this is last minute stuff here anywho???plzgod
 }
-#submit {
-  //good ol button css
+.body.correct {
+  backgroud-color: $correct;
+  border: solid;
+  border-color: $neutral;
+  border-width: thick;
 }
-submit:active {
-  //by active i mean on click but i think thats right. could just do hover tho maybe?>>?>?
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 62.5%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 62.5%;
-  background-color: red;
+.body.wrong {
+  backgroud-color: $wrong;
+  border: solid;
+
+  border-width: thick;
 }
+.q-container {
+  max-width: 80%;
+  background-color: $white;
+  border-radius: 0.5rem;
+  padding: 1.3rem;
+  filter: drop-shadow(0 0 1.3rem #333);
+}
+.answerchoices-box {
+  display: grid;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.button {
+  background-color: $neutral;
+  color: $white;
+  border-radius: 0.2rem;
+  padding: 0.3rem 0.6rem;
+}
+.button:hover {
+  border-color: $white;
+  border-width: thick;
+}
+.button.correct {
+  background-color: $correct;
+}
+.start-button,
+.next-button {
+  border-radius: 0;
+  padding: 0.5rem 0.8rem;
+}
+.play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+//by active i mean on click but i think thats right. could just do hover tho maybe?>>?>?
