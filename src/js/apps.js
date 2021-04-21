@@ -1,9 +1,6 @@
 import { questions } from "./questions.js";
 
 //id from html to java
-const ansA = document.getElementById("a");
-const ansB = document.getElementById("b");
-const ansC = document.getElementById("c");
 const question = document.getElementById("question");
 const NextButton = document.getElementById("next-btn");
 const questionContainter = document.getElementById("q-container");
@@ -19,7 +16,15 @@ function startGame() {
   setNextQuestion();
 }
 function showQuestions(question) {
-  question.innerText = question.question;
+  question.innerText = question.question; //displays question text
+  question.answers.forEach((answer) => {
+    const button = document.createElement("button");
+    button.innerText = answer.innerText;
+    button.classLIst.add("btn");
+    if (answer.correct) {
+      button.dataset.correct = answer.correct;
+    }
+  });
   //thanks google my good frienderino/butigetit
   //then output display questions herrree and like,,, according to whalen,,,
   // Display question one.
@@ -34,6 +39,7 @@ function showQuestions(question) {
 function setNextQuestion() {
   showQuestions(shuffledQuestions[currentQuestionsIndex]);
 }
+
 // Let score
 let score = 0;
 
