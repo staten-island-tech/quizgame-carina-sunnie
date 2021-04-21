@@ -9,11 +9,11 @@ const questions = [
     ],
   },
   {
-    Question: "Approximately what percentage of people are autistic in the US?",
+    Question: "Which one of these famous portraits' subjects have eyebrows?",
     Answers: [
-      { a: "2%", correct: true },
-      { b: "100%", correct: false },
-      { c: "13%", correct: false },
+      { a: "Portrait of Adele Bloch-Bauer I", correct: true },
+      { b: "Mona Lisa", correct: false },
+      { c: "girl with a Pearl Earring", correct: false },
     ],
   },
   {
