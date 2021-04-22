@@ -24,6 +24,7 @@ function startGame() {
   //sorts questions randomly, Math.random gives # between 1 & 0, subtracting 0.5 will make it randomized
   currentQuestionsIndex = 0;
   setNextQuestion();
+  countCorrectAnswers = 0;
 }
 function showQuestion(question) {
   question.innerText = question.question; //displays question text
@@ -70,12 +71,16 @@ function selectAnswer(e) {
   Array.from(answerChoices.children).forEach((button) => {
     setStatusClass(button, button.dataset.correct);
   }); //loop thru buttons
+  if ((selectedButton.dataset = correct)) {
+    countCorrectAnswers++;
+  }
   if (shuffledQuestions.length > currentQuestionsIndex + 1) {
     NextButton.classList.remove("hide");
   } else {
-    //HOW TO SHOW THE SCORE???
-    //i gotchu fam
-    //i hope
+    document.getElementById("correct-answers").innerHTML =
+      countRightAnswers + "/" + shuffledQuestions.length; //shows score in html
+    startButton.innerText = "restart";
+    startButton.classList.remove("hide");
   }
 }
 
@@ -93,19 +98,17 @@ function clearStatusClass(element) {
   element.classList.remove("correct");
 } //clear the status class by removing them
 
-let score = 0;
+let countCorrectAnswers = 0;
 
-for (const i = 0; i < questions.length; i) {
-  let response = window.question(questions[i].question); //i is like the question number . also wanted triple euqual signed cause i dont trust it but it didnt work :(
-  if (response === questions[i].answer) {
-    score++;
-    alert("Correct!... how did you know that? kinda sussspicious ngl");
-  } else {
-    ("WRONG!!! womp womp... wooooomp");
-  }
-} //ITS A BIG OL LOOP. BREAKS WHEN YOU THE NUMBER OF QUESTIONS ARE ANSWERED
-
-alert("YOUR SCORE IS: " + score + "/" + questions.length + ". Not bad.");
+// for (const i = 0; i < questions.length; i) {
+//   let response = window.question(questions[i].question); //i is like the question number . also wanted triple euqual signed cause i dont trust it but it didnt work :(
+//   if (response === questions[i].answer) {
+//     score++;
+//     alert("Correct!... how did you know that? kinda sussspicious ngl");
+//   } else {
+//     ("WRONG!!! womp womp... wooooomp");
+//   }
+// } //ITS A BIG OL LOOP. BREAKS WHEN YOU THE NUMBER OF QUESTIONS ARE ANSWERED
 
 // //etc. or have choices then have correctAnswer at the end. put values inthere maybe
 
