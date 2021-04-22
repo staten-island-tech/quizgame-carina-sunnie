@@ -10,17 +10,17 @@
   <h1>Random Disturbing Facts Quiz</h1>
   <div class="container" class="hide">
     <div class="q-container">
-      <h3 id="question">Question</h3>
+      <div id="question" class="question">Question</div>
   
-      <div class="answerchoices-box">
-        <button id="a">a</button>
-        <button id="b">b</button>
-        <button id="c">c</button>
+      <div id="answerchoices-box" class=".answerchoices-grid">
+        <button class="button" id="button">a</button>
+        <button class="button" id="button">b</button>
+        <button class="button" id="button">c</button> <!--yes class and id im paranoid ok-->
       </div>
     </div>
+    <div class="play"> <button id="start-button" class="start-button button">Start</button>
+      <button id="next-button" class="next-button button hide">Next Question</button></div>
   </div>
-  <div class="play"> <button id="start-button" class="start-button button">Start</button>
-    <button id="next-button" class="next-button button hide">Next Question</button></div>
   
   <script src="js/apps.js"></script>
 </body>

@@ -46,7 +46,7 @@ body {
   padding: 1.3rem;
   filter: drop-shadow(0 0 1.3rem #333);
 }
-.answerchoices-box {
+.answerchoices-grid {
   display: grid;
   gap: 0.5rem;
   margin: 1rem 0;
@@ -63,6 +63,9 @@ body {
 }
 .button.correct {
   background-color: $correct;
+}
+.button.wrong {
+  background-color: $wrong;
 }
 .start-button,
 .next-button {

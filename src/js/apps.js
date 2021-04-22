@@ -1,11 +1,16 @@
 import { questions } from "./questions.js";
 
 //id from html to java
+const startButton = document.getElementById("start-button");
 const question = document.getElementById("question");
 const NextButton = document.getElementById("next-button");
-const questionContainter = document.getElementById("q-container");
+const questionContainer = document.getElementById("q-container");
 const answerChoices = document.getElementById("answerchoices-box");
 
+function startGame() {
+  startButton.classList.add("hide");
+  questionContainer.classLis;
+}
 let shuffledQuestions, currentQuestionsIndex;
 
 NextButton.addEventListener("click", () => {
@@ -13,19 +18,19 @@ NextButton.addEventListener("click", () => {
   setNextQuestion();
 });
 
-//here put shtuff to start the quiz and the function shamarbledarngledingdong
+//here put shtuff to start the quiz and the function
 function startGame() {
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   //sorts questions randomly, Math.random gives # between 1 & 0, subtracting 0.5 will make it randomized
   currentQuestionsIndex = 0;
   setNextQuestion();
 }
-function showQuestions(question) {
+function showQuestion(question) {
   question.innerText = question.question; //displays question text
   question.answers.forEach((answer) => {
     const button = document.createElement("button");
     button.innerText = answer.innerText;
-    button.classLIst.add("button");
+    button.classList.add("button");
     if (answer.correct) {
       button.dataset.correct = answer.correct;
     } // add data attribute to btn element, only correct answer is accounted for (?)
@@ -49,6 +54,7 @@ function setNextQuestion() {
 }
 
 function resetState() {
+  //clearStatusClass(document.body) ??//
   NextButton.classList.add("hide");
   while (answerChoices.firstChild) {
     answerChoices.removeChild(answerChoices.firstChild);
@@ -67,6 +73,8 @@ function selectAnswer(e) {
     NextButton.classList.remove("hide");
   } else {
     //HOW TO SHOW THE SCORE???
+    //i gotchu fam
+    //i hope
   }
 }
 
@@ -88,7 +96,7 @@ let score = 0;
 
 for (const i = 0; i < questions.length; i) {
   let response = window.question(questions[i].question); //i is like the question number . also wanted triple euqual signed cause i dont trust it but it didnt work :(
-  if (response === questions[i].annswer) {
+  if (response === questions[i].answer) {
     score++;
     alert("Correct!... how did you know that? kinda sussspicious ngl");
   } else {
