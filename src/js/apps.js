@@ -7,10 +7,8 @@ const NextButton = document.getElementById("next-button");
 const questionContainer = document.getElementById("q-container");
 const answerChoices = document.getElementById("answerchoices-box");
 
-function startGame() {
-  startButton.classList.add("hide");
-  questionContainer.classLis;
-}
+startButton.addEventListener("click", startGame);
+
 let shuffledQuestions, currentQuestionsIndex;
 
 NextButton.addEventListener("click", () => {
@@ -20,6 +18,8 @@ NextButton.addEventListener("click", () => {
 
 //here put shtuff to start the quiz and the function
 function startGame() {
+  startButton.classList.add("hide");
+  questionContainer.classList.remove("hide");
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   //sorts questions randomly, Math.random gives # between 1 & 0, subtracting 0.5 will make it randomized
   currentQuestionsIndex = 0;
@@ -27,6 +27,7 @@ function startGame() {
 }
 function showQuestion(question) {
   question.innerText = question.question; //displays question text
+  //loop:
   question.answers.forEach((answer) => {
     const button = document.createElement("button");
     button.innerText = answer.innerText;
@@ -58,7 +59,7 @@ function resetState() {
   NextButton.classList.add("hide");
   while (answerChoices.firstChild) {
     answerChoices.removeChild(answerChoices.firstChild);
-    //hides previous answers + sets new answers & questions instead
+    //hides previous answers + sets new answers & questions instead. loops through children for answerchoice button elements
   }
 }
 
@@ -103,6 +104,7 @@ for (const i = 0; i < questions.length; i) {
     ("WRONG!!! womp womp... wooooomp");
   }
 } //ITS A BIG OL LOOP. BREAKS WHEN YOU THE NUMBER OF QUESTIONS ARE ANSWERED
+
 alert("YOUR SCORE IS: " + score + "/" + questions.length + ". Not bad.");
 
 // //etc. or have choices then have correctAnswer at the end. put values inthere maybe
