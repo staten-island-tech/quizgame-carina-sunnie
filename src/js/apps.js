@@ -4,7 +4,7 @@ import { questions } from "./questions.js";
 const startButton = document.getElementById("start-button");
 const question = document.getElementById("question");
 const NextButton = document.getElementById("next-button");
-const questionContainer = document.getElementById("q-container");
+const questionContainer = querySelector("q-container");
 const answerChoices = document.getElementById("answerchoices-box");
 
 startButton.addEventListener("click", startGame);
@@ -26,12 +26,12 @@ function startGame() {
   setNextQuestion();
   countCorrectAnswers = 0;
 }
-function showQuestion(question) {
+function showQuestions(question) {
   question.innerText = question.question; //displays question text
   //loop:
-  question.answers.forEach((answer) => {
+  question.Answers.forEach((answer) => {
     const button = document.createElement("button");
-    button.innerText = answer.innerText;
+    button.innerText = answer.text;
     button.classList.add("button");
     if (answer.correct) {
       button.dataset.correct = answer.correct;
