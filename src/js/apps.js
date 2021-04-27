@@ -81,11 +81,10 @@ function selectAnswer(e) {
       countRightAnswers + "/" + shuffledQuestions.length; //shows score in html
     startButton.innerText = "restart";
     startButton.classList.remove("hide");
-    if (countRightAnswers >= 4){
-      alert("well done!.. a little suspicious, but sure!") 
-    } else{
-      alert("whomp whomp, not great :(")
-    }
+    if (countRightAnswers >= 4) {
+      alert("well done!.. a little suspicious, but sure!");
+    } else {
+      alert("whomp whomp, not great :(");
     }
   }
 }
