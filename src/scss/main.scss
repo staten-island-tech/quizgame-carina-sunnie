@@ -11,7 +11,7 @@ $white: rgba(243, 243, 245, 255);
 *::after {
   //google says this makes all the elements have this property for some reason??? {
   box-sizing: border-box;
-
+}
 body {
   // background-color: rgba(243, 243, 245, 255);
   background-color: $neutral;
