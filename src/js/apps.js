@@ -17,12 +17,13 @@ NextButton.addEventListener("click", () => {
 });
 
 //here put shtuff to start the quiz and the function
+let countCorrectAnswers = 0;
 function startGame() {
   startButton.classList.add("hide");
-  questionContainer.classList.remove("hide");
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   //sorts questions randomly, Math.random gives # between 1 & 0, subtracting 0.5 will make it randomized
   currentQuestionsIndex = 0;
+  questionContainer.classList.remove("hide");
   setNextQuestion();
   countCorrectAnswers = 0;
 }
@@ -77,6 +78,8 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionsIndex + 1) {
     NextButton.classList.remove("hide");
   } else {
+    startButton.innerText = "Restart";
+    startButton.classList.remove("hide");
     document.getElementById("correct-answers").innerHTML =
       countRightAnswers + "/" + shuffledQuestions.length; //shows score in html
     startButton.innerText = "restart";
@@ -102,8 +105,6 @@ function clearStatusClass(element) {
   element.classList.remove("wrong");
   element.classList.remove("correct");
 } //clear the status class by removing them
-
-let countCorrectAnswers = 0;
 
 // for (const i = 0; i < questions.length; i) {
 //   let response = window.question(questions[i].question); //i is like the question number . also wanted triple euqual signed cause i dont trust it but it didnt work :(

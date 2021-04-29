@@ -22,30 +22,23 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: serif, monospace, sans-serif;
   font-size: 62.5%;
-}
-.QuestionOne,
-.QuestionTwo,
-.QuestionThree {
-  //not sure if should classify these
-}
-.ansChoiceOne {
-  //same here;;;this is last minute stuff here anywho???plzgod
+  transition: 0.2s;
 }
 .body.correct {
   backgroud-color: $correct;
   border: solid;
   border-color: $neutral;
-  border-width: thick;
+  border-width: thin;
 }
 .body.wrong {
   backgroud-color: $wrong;
   border: solid;
 
-  border-width: thick;
+  border-width: thin;
 }
-.q-container {
+.container {
   max-width: 80%;
   background-color: $white;
   border-radius: 0.5rem;
@@ -54,14 +47,14 @@ body {
 }
 .answerchoices-grid {
   display: grid;
-  gap: 0.5rem;
+  gap: 1rem;
   margin: 1rem 0;
 }
 .button {
   background-color: $neutral;
   color: $white;
   border-radius: 0.2rem;
-  padding: 0.3rem 0.6rem;
+  padding: 1rem 1.5rem;
 }
 .button:hover {
   border-color: $white;
