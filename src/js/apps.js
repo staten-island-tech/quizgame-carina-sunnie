@@ -4,7 +4,7 @@ import { questions } from "./questions.js";
 const startButton = document.getElementById("start-button");
 const question = document.getElementById("question");
 const NextButton = document.getElementById("next-button");
-const questionContainer = querySelector("q-container");
+const questionContainer = document.querySelector(".q-container");
 const answerChoices = document.getElementById("answerchoices-box");
 
 startButton.addEventListener("click", startGame);

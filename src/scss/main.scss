@@ -6,11 +6,13 @@ $white: rgba(243, 243, 245, 255);
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
-*, *::before, *::after //google says this makes all the elements have this property for some reason??? {
+*,
+*::before,
+*::after {
+  //google says this makes all the elements have this property for some reason??? {
   box-sizing: border-box;
 
 body {
-  
   // background-color: rgba(243, 243, 245, 255);
   background-color: $neutral;
   padding: 0;
