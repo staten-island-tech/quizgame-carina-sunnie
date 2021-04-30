@@ -18,6 +18,7 @@ NextButton.addEventListener("click", () => {
 
 //here put shtuff to start the quiz and the function
 let countCorrectAnswers = 0;
+
 function startGame() {
   startButton.classList.add("hide");
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
