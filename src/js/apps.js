@@ -83,7 +83,6 @@ function selectAnswer(e) {
     startButton.classList.remove("hide");
     document.getElementById("correct-answers").innerHTML =
       countRightAnswers + "/" + shuffledQuestions.length; //shows score in html
-    startButton.innerText = "restart";
     startButton.classList.remove("hide");
     if (countRightAnswers >= 4) {
       alert("well done!.. a little suspicious, but sure!");
