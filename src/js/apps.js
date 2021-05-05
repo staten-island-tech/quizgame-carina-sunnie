@@ -2,7 +2,7 @@ import { questions } from "./questions.js";
 
 //id from html to java
 const startButton = document.getElementById("start-button");
-const question = document.getElementById("question");
+const questionContent = document.getElementById("question");
 const NextButton = document.getElementById("next-button");
 const questionContainer = document.querySelector(".q-container");
 const answerChoices = document.getElementById("answerchoices-box");
@@ -29,7 +29,7 @@ function startGame() {
   countCorrectAnswers = 0;
 }
 function showQuestions(question) {
-  question.innerText = question.question; //displays question text
+  questionContent.innerText = question.Question; //displays question text
   //loop:
   question.Answers.forEach((answer) => {
     const button = document.createElement("button");
@@ -73,7 +73,7 @@ function selectAnswer(e) {
   Array.from(answerChoices.children).forEach((button) => {
     setStatusClass(button, button.dataset.correct);
   }); //loop thru buttons
-  if ((selectedButton.dataset = correct)) {
+  if (selectedButton.dataset === correct) {
     countCorrectAnswers++;
   }
   if (shuffledQuestions.length > currentQuestionsIndex + 1) {
