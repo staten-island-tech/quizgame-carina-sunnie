@@ -12,7 +12,7 @@ const questions = [
     Question: "Which one of these famous portraits' subjects have eyebrows?",
     Answers: [
       { text: "Portrait of Adele Bloch-Bauer I", correct: true },
-      { text: "Mona Lsa", correct: false },
+      { text: "Mona Lisa", correct: false },
       { text: "Girl with a Pearl Earring", correct: false },
     ],
   },
