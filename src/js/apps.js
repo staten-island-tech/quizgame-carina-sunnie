@@ -82,9 +82,9 @@ function selectAnswer(e) {
     startButton.innerText = "Restart";
     startButton.classList.remove("hide");
     document.getElementById("correct-answers").innerHTML =
-      countRightAnswers + "/" + shuffledQuestions.length; //shows score in html
+      countCorrectAnswers + "/" + shuffledQuestions.length; //shows score in html
     startButton.classList.remove("hide");
-    if (countRightAnswers >= 4) {
+    if (countCorrectAnswers >= 4) {
       alert("well done!.. a little suspicious, but sure!");
     } else {
       alert("whomp whomp, not great :(");
