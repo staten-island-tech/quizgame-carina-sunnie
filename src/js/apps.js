@@ -41,15 +41,6 @@ function showQuestions(question) {
     button.addEventListener("click", selectAnswer);
     answerChoices.appendChild(button);
   });
-  //thanks google my good frienderino/butigetit
-  //then output display questions herrree and like,,, according to whalen,,,
-  // Display question one.
-  // Listen for user input event.
-  // Check if correct.
-  // If correct display correct modal (popup) or check, update score
-  // Else display false modal or x, Update score.
-  // (Checking index of q) if question number is less than questions.length display next question
-  // else show user score display score modal/ end modal or something LATER OK*****
 }
 
 function setNextQuestion() {
@@ -77,7 +68,7 @@ function selectAnswer(e) {
     countCorrectAnswers++;
   }
   if (shuffledQuestions.length > currentQuestionsIndex + 1) {
-    NextButton.classList.remove("hide");
+    NextButton.classList.remove("hide"); //checks for remaining questions or lack thereof
   } else {
     startButton.innerText = "Restart";
     startButton.classList.remove("hide");
@@ -115,17 +106,3 @@ function clearStatusClass(element) {
 //     ("WRONG!!! womp womp... wooooomp");
 //   }
 // } //ITS A BIG OL LOOP. BREAKS WHEN YOU THE NUMBER OF QUESTIONS ARE ANSWERED
-
-// //etc. or have choices then have correctAnswer at the end. put values inthere maybe
-
-// // //
-// // //Event to Start game ? Click start button or on page load (listening to an event)
-// // Display quiz question or questions
-// // For questions for each iterate to display Or
-// // Display question one.
-// // Listen for user input event.
-// // Check if correct.
-// // If correct display correct modal (popup) or check, update score
-// // Else display false modal or x, Update score.
-// // (Checking index of q) if question number is less than questions.length display next question
-// // else show user score display score modal/ end modal or something
