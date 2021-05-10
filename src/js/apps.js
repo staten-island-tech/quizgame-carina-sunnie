@@ -73,7 +73,7 @@ function selectAnswer(e) {
   Array.from(answerChoices.children).forEach((button) => {
     setStatusClass(button, button.dataset.correct);
   }); //loop thru buttons
-  if (selectedButton.dataset === correct) {
+  if (correct) {
     countCorrectAnswers++;
   }
   if (shuffledQuestions.length > currentQuestionsIndex + 1) {
@@ -89,6 +89,7 @@ function selectAnswer(e) {
     } else {
       alert("whomp whomp, not great :(");
     }
+    if(countCorrectAnswers )
   }
 }
 
