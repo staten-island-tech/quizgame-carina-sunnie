@@ -89,7 +89,21 @@ function selectAnswer(e) {
     } else {
       alert("whomp whomp, not great :(");
     }
-    if(countCorrectAnswers )
+    if (countCorrectAnswers === 0 || countCorrectAnswers === 1) {
+      alert(" I expected nothing and yet I'm still disappointed.");
+    }
+    if (countCorrectAnswers === 2 || countCorrectAnswers === 3) {
+      alert(" this score belongs to someone who just randomly clicked");
+    }
+    if (countCorrectAnswers === 4 || countCorrectAnswers === 5) {
+      alert(" well done, young one (or old one if you're old)");
+    }
+    if (countCorrectAnswers === 6 || countCorrectAnswers === 7) {
+      alert(" ...did you google the answers");
+    }
+    if (countCorrectAnswers === shuffledQuestions.length) {
+      alert(" mark me impressed but you definately cheated");
+    }
   }
 }
 
