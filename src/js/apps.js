@@ -75,7 +75,32 @@ function selectAnswer(e) {
     document.getElementById("correct-answers").innerHTML =
       countCorrectAnswers + "/" + shuffledQuestions.length; //shows score in html
     startButton.classList.remove("hide");
-    if (countCorrectAnswers >= 4) {
+
+    int value = shuffledQuestions.length //integer value, kinda like num and const 
+    //switch statements give a number of different execution paths
+    switch (value) {
+      case (0, 1):
+        System.out.printIn(
+          " I expected nothing and yet I'm still disappointed."
+        );
+        break; //breaks break the path direction
+      case (2, 3):
+        System.out.printIn(
+          "this score belongs to someone who just randomly clicked"
+        );
+        break;
+      case (4, 5):
+        System.out.printIn("well done, young one (or old one if you're old)");
+        break;
+      case (6, 7):
+        System.out.printIn(" ...did you google the answers?");
+        break;
+      case 8:
+        System.out.printIn("mark me impressed but you definately cheated");
+        break;
+    }
+
+    /* if (countCorrectAnswers >= 4) {
       alert("well done!.. a little suspicious, but sure!");
     } else {
       alert("whomp whomp, not great :(");
@@ -94,7 +119,7 @@ function selectAnswer(e) {
     }
     if (countCorrectAnswers === shuffledQuestions.length) {
       alert(" mark me impressed but you definately cheated");
-    }
+    }*/
   }
 }
 
